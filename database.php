@@ -15,6 +15,8 @@ echo "New Record Inserted Successfully";
 }
 else{
 echo "Data not successfully Inserted.";
+?>
+<?php
 }
 
 $dbh = null;
@@ -26,3 +28,4 @@ echo $e->getMessage();
 
 }
 ?>
+<a href="practice.php">view data</a>
