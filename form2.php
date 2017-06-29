@@ -10,20 +10,20 @@
   <div class="form-group">
     <label for="inputText3" class="col-sm-2 control-label">Full name</label>
     <div class="col-sm-10 col-md-3">
-      <input type="text" class="form-control" id="inputText3" placeholder="Jhon doe" />
+      <input type="text" class="form-control" id="inputText3" name="fullname" placeholder="Jhon doe" />
     </div>
   </div>
   <div class="form-group">
     <label for="inputText3" class="col-sm-2 control-label">Write about yourself</label>
     <div class="col-sm-10 col-md-6">
-    <textarea class="form-control" style="resize: vertical;"></textarea>
+    <textarea class="form-control" style="resize: vertical;" name="textWritten"></textarea>
     </label>
     </div>
   </div>
   <div class="form-group">
   <label for="inputDate3" class="col-sm-2 control-label">DoB</label>
       <div class="col-sm-10 col-md-6">
-            <input type="date" class="form-control" id="inputDate3" />
+            <input type="date" class="form-control" id="inputDate3" name="dateEntered"/>
       </div>
 </div>
 
@@ -31,7 +31,7 @@
   <div class="form-group">
   <label for="inputTel3" class="col-sm-2 control-label">Phone number</label>
     <div class="col-sm-10 col-md-6">
-      <input type="number" class="form-control" required id="inputTel3" />
+      <input type="number" class="form-control" name="Phonenumber" required id="inputTel3" />
     </div>
 </div>
 
@@ -40,32 +40,22 @@
     <label for="inlineRadio[]" class="col-sm-2 control-label">Gender</label>
       <div class="col-sm-10">
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio[]" value="option1"> Male</label>
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio[]" name="male" value="option1"> Male</label>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio[]" value="option2"> Female</label>
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio[]" name="female" value="option2"> Female</label>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio[]" value="option3"> Other</label>
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio[]" name="others" value="option3"> Other</label>
       </div>
   </div>
 
 <!-- country picking -->
-<div class="form-group">
+<!-- <div class="form-group">
   <label for="countries[]" class="col-sm-2 control-label">Nationality</label>
     <div class="col-sm-10 col-md-3">
-      <div class="bfh-selectbox bfh-countries" id="countries[]" data-country="NP" data-flags="true" data-filter="true">
-        <div id="countries[1]" data-value="US">United States</div>
-        <div id="countries[2]" data-value="NP">Nepal</div>
-        <div id="countries[3]" data-value="UK">United Kingdom</div>
-        <div id="countries[4]" data-value="PK">Pakistan</div>
-        <div id="countries[5]" data-value="ES">Spain</div>
-        <div id="countries[6]" data-value="SD">Sudan</div>
-        <div id="countries[7]" data-value="RU">Russia</div>
-        <div id="countries[8]" data-value="PH">Phillipines</div>
-        <div id="countries[9]" data-value="HK">Hongkong</div>
-        <div id="countries[10]" data-value="NO">Norway</div>
+     <div class="bfh-selectbox bfh-countries" data-country="US" data-flags="true">
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- end of country picking -->
 
 
