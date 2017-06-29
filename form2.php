@@ -1,10 +1,10 @@
 <?php include "head.php"; ?>
 <div class="container">
-<form class="form-horizontal">
+<form class="form-horizontal" method="post" action="view.php">
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
     <div class="col-sm-10 col-md-3">
-      <input type="email" class="form-control" required id="inputEmail3" placeholder="Email" />
+      <input type="email" class="form-control" required id="inputEmail3" name="email" placeholder="Email" />
     </div>
   </div>
   <div class="form-group">
@@ -27,6 +27,7 @@
       </div>
 </div>
 
+<!-- phone number -->
   <div class="form-group">
   <label for="inputTel3" class="col-sm-2 control-label">Phone number</label>
     <div class="col-sm-10 col-md-6">
@@ -34,6 +35,7 @@
     </div>
 </div>
 
+<!-- gender picking -->
   <div class="form-group">
     <label for="inlineRadio[]" class="col-sm-2 control-label">Gender</label>
       <div class="col-sm-10">
@@ -47,20 +49,20 @@
   </div>
 
 <!-- country picking -->
-  <div class="form-group">
-  <label for="country" class="col-sm-2 control-label">Nationality</label>
+<div class="form-group">
+  <label for="countries[]" class="col-sm-2 control-label">Nationality</label>
     <div class="col-sm-10 col-md-3">
-      <div class="bfh-selectbox bfh-countries" data-country="NP" data-flags="true" data-filter="true">
-        <div data-value="US">United States</div>
-        <div data-value="NP">Nepal</div>
-        <div data-value="UK">United Kingdom</div>
-        <div data-value="PK">Pakistan</div>
-        <div data-value="ES">Spain</div>
-        <div data-value="SD">Sudan</div>
-        <div data-value="RU">Russia</div>
-        <div data-value="PH">Phillipines</div>
-        <div data-value="HK">Hongkong</div>
-        <div data-value="NO">Norway</div>
+      <div class="bfh-selectbox bfh-countries" id="countries[]" data-country="NP" data-flags="true" data-filter="true">
+        <div id="countries[1]" data-value="US">United States</div>
+        <div id="countries[2]" data-value="NP">Nepal</div>
+        <div id="countries[3]" data-value="UK">United Kingdom</div>
+        <div id="countries[4]" data-value="PK">Pakistan</div>
+        <div id="countries[5]" data-value="ES">Spain</div>
+        <div id="countries[6]" data-value="SD">Sudan</div>
+        <div id="countries[7]" data-value="RU">Russia</div>
+        <div id="countries[8]" data-value="PH">Phillipines</div>
+        <div id="countries[9]" data-value="HK">Hongkong</div>
+        <div id="countries[10]" data-value="NO">Norway</div>
       </div>
     </div>
   </div>
