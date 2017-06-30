@@ -1,6 +1,6 @@
 <?php include "head.php"; ?>
 <div class="container">
-<form class="form-horizontal" method="post" action="view.php">
+<form class="form-horizontal" method="post" action="view.php" enctype="multipart/form-data">
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
     <div class="col-sm-10 col-md-3">
@@ -10,20 +10,20 @@
   <div class="form-group">
     <label for="inputText3" class="col-sm-2 control-label">Full name</label>
     <div class="col-sm-10 col-md-3">
-      <input type="text" class="form-control" id="inputText3" placeholder="Jhon doe" />
+      <input type="text" class="form-control" id="inputText3" name="fullName" placeholder="Jhon doe" />
     </div>
   </div>
   <div class="form-group">
     <label for="inputText3" class="col-sm-2 control-label">Write about yourself</label>
     <div class="col-sm-10 col-md-6">
-    <textarea class="form-control" style="resize: vertical;"></textarea>
+    <textarea class="form-control" name="textArea" style="resize: vertical;"></textarea>
     </label>
     </div>
   </div>
   <div class="form-group">
   <label for="inputDate3" class="col-sm-2 control-label">DoB</label>
       <div class="col-sm-10 col-md-6">
-            <input type="date" class="form-control" id="inputDate3" />
+            <input type="date" name="DoB" class="form-control" id="inputDate3" />
       </div>
 </div>
 
@@ -31,7 +31,7 @@
   <div class="form-group">
   <label for="inputTel3" class="col-sm-2 control-label">Phone number</label>
     <div class="col-sm-10 col-md-6">
-      <input type="number" class="form-control" required id="inputTel3" />
+      <input type="number" class="form-control" name="PhoneNum" required id="inputTel3" />
     </div>
 </div>
 
@@ -40,29 +40,37 @@
     <label for="inlineRadio[]" class="col-sm-2 control-label">Gender</label>
       <div class="col-sm-10">
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio[]" value="option1"> Male</label>
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio[]" name="Gender" value="option1"> Male</label>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio[]" value="option2"> Female</label>
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio[]" name="Gender" value="option2"> Female</label>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio[]" value="option3"> Other</label>
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio[]" name="Gender" value="option3"> Other</label>
       </div>
   </div>
-
+<div class="form-group">
+  <label for="PicUpload" class="col-sm-2 control-Label">Pic upload</label>
+    <div class="col-sm-4">
+      <label class="custom-file">
+        <input type="file" id="file" name="picUpload2" class="custom-file-input">
+          <span class="custom-file-control"></span>
+      </label>
+    </div>
+</div>
 <!-- country picking -->
 <div class="form-group">
   <label for="countries[]" class="col-sm-2 control-label">Nationality</label>
     <div class="col-sm-10 col-md-3">
-      <div class="bfh-selectbox bfh-countries" id="countries[]" data-country="NP" data-flags="true" data-filter="true">
-        <div id="countries[1]" data-value="US">United States</div>
-        <div id="countries[2]" data-value="NP">Nepal</div>
-        <div id="countries[3]" data-value="UK">United Kingdom</div>
-        <div id="countries[4]" data-value="PK">Pakistan</div>
-        <div id="countries[5]" data-value="ES">Spain</div>
-        <div id="countries[6]" data-value="SD">Sudan</div>
-        <div id="countries[7]" data-value="RU">Russia</div>
-        <div id="countries[8]" data-value="PH">Phillipines</div>
-        <div id="countries[9]" data-value="HK">Hongkong</div>
-        <div id="countries[10]" data-value="NO">Norway</div>
+      <div class="bfh-selectbox bfh-countries" data-country="NP" id="countries[]" data-flags="true" data-filter="true">
+        <div data-value="US" name="United states" id="countries[]">United States</div>
+        <div data-value="NP" name="Nepal" id="countries[]">Nepal</div>
+        <div data-value="UK" name="UnitedKingdom" id="countries[]">United Kingdom</div>
+        <div data-value="PK" name="Pakistan" id="countries[]">Pakistan</div>
+        <div data-value="ES" name="Spain" id="countries[]">Spain</div>
+        <div data-value="SD" name="Sudan" id="countries[]">Sudan</div>
+        <div data-value="RU" name="Russia" id="countries[]">Russia</div>
+        <div data-value="PH" name="Philippines" id="countries[]">Phillipines</div>
+        <div data-value="HK" name="HongKong" id="countries[]">Hongkong</div>
+        <div data-value="NO" name="Norway" id="countries[]">Norway</div>
       </div>
     </div>
   </div>
@@ -74,7 +82,7 @@
     <div class="col-sm-offset-2 col-sm-10">
       <div class="checkbox">
         <label>
-          <input type="checkbox"> Remember me
+          <input type="checkbox" name="remember"> Remember me
         </label>
       </div>
     </div>
