@@ -1,17 +1,23 @@
 <?php include "head.php";?>
 <div class="container">
 <?php
-	if(isset($_SESSION['error']) && $_SESSION['error'] != ""){
-			echo $_SESSION['error'];		
-		}
 	
-	if(isset($_SESSION['warning']) && $_SESSION['warning'] != ""){
-			echo $_SESSION['warning'];		
-		}
+	if(isset($_SESSION["error"]) && $_SESSION["error"] != ""){
+			echo $_SESSION["error"];		
+		}unset($_SESSION["error"]);
+	if(isset($_SESSION["error1"]) && $_SESSION["error1"] != ""){
+			echo $_SESSION["error1"];		
+		}unset($_SESSION["error1"]);
 	
-	if(isset($_SESSION['success']) && $_SESSION['success'] != ""){	
-			echo $_SESSION['success'];		
-		}
+	if(isset($_SESSION["warning"]) && $_SESSION["warning"] != ""){
+			echo $_SESSION["warning"];		
+		}unset($_SESSION["warning"]);
+	if(isset($_SESSION["warning1"]) && $_SESSION["warning1"] != ""){
+			echo $_SESSION["warning1"];		
+		}unset($_SESSION["warning1"]);
+	if(isset($_SESSION["success"]) && $_SESSION["success"] != ""){	
+			echo $_SESSION["success"];		
+		}unset($_SESSION["success"]);
 ?>
 <form class="form-horizontal" action="loginprocess.php" method="post">
 
@@ -19,7 +25,7 @@
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-3 control-label">username</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="inputEmail3" placeholder="Email" name="username">
+      <input type="text" class="form-control" id="inputEmail3" placeholder="Email" name="username">	
     </div>
   </div>
 
@@ -44,7 +50,7 @@
 <div class="form-group">
  <label for="country" class="col-sm-3 control-label">Select Country</label>
 <div class="col-sm-6"> 
-  <select class="form-control" id="country" name="country">
+  <select class="form-control" id="country" name="country[]">
     Nepal
     <span class="caret"></span>
      	<option><a href="#">Nepal</a></option>
@@ -77,4 +83,13 @@
   </div>
 </form>
 </div>
+
+<script>
+$(function () {
+  $("[data-toggle="tooltip"]").tooltip()
+})
+</script>
+<?php 
+print_r ($_POST);
+?>
 <?php include "foot.php";?>
